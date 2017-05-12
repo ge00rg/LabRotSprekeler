@@ -1,0 +1,76 @@
+\title{Documentation of Calcium Imaging Data, Converted to HDF5}
+
+\documentclass[12pt]{article}
+
+\usepackage{listings}
+
+
+\begin{document}
+\maketitle
+First, install the h5py package if it is not installed already. If you are using anaconda, do
+\begin{lstlisting}
+conda install h5py
+\end{lstlisting}
+Otherwise
+\begin{lstlisting}
+pip install h5py
+\end{lstlisting}
+To access the data of a file with the name "140708B\_140811a\_result.hdf5", write:
+
+\begin{lstlisting}[language=Python]
+import h5py
+
+filename = "calcium_data/140708B_140811a_result.hdf5"
+f = h5py.File(filename, "r")
+\end{lstlisting}
+This loads the .hdf5 file into f.
+
+Each such file contains three datasets, "meta", "data" and "licktimes" (it is assumed that the files are contained in the folder "calcium\_data" that is located in the same folder as this script. Adjust accordingly.). The file is automatically closed when the script terminates. In ipython notebook it can sometimes be necessary to restart the kernel if one wants to reload the data, as it keeps its variables in memory and does not "terminate" the program. To access a dataset, do:
+\begin{lstlisting}[language=Python]
+meta = f['meta']			#or
+data = f['data']			#or
+licktimes = f['licktimes']
+\end{lstlisting}
+These datasets, now contained in meta, data and licktimes function very much the same way as numpy arrays. The most notable difference is that if we want to access the whole dataset, we write (for example)
+\begin{lstlisting}[language=Python]
+print(data[:])
+\end{lstlisting}
+instead of
+\begin{lstlisting}[language=Python]
+print(data)
+\end{lstlisting}
+as the latter will only return some properties of the dataset. There are other small differences that are not likely to be important (for example fancy indexing can be slow). \newline
+
+\begin{lstlisting}[language=Python]
+f['meta']
+\end{lstlisting}
+is an array of shape (n\_trials, 3) and contains, in this order the values session, stimAmp and hit/miss for every trial. A "hit" is encoded by a 1, while a "miss" is encoded by a 0. To find out whether trial 75 was a hit or a miss, we write
+\begin{lstlisting}[language=Python]
+meta = f['meta']
+print(meta[75,2])
+>>>1
+\end{lstlisting}
+which means, that this trial is a "hit". \newline
+
+\begin{lstlisting}[language=Python]
+f['data']
+\end{lstlisting}
+is an array with shape (n\_trials, n\_recordSites, n\_times).
+\begin{lstlisting}[language=Python]
+data = f['data']
+print(data[75, 5,:])
+\end{lstlisting}
+will print the timeseries of the calcium imaging from trial 75 and recording site 5. \newline
+
+\begin{lstlisting}[language=Python]
+f['licktimes']
+\end{lstlisting}
+is an array of shape (n\_trials, max\_licktimes) which contains the licktimes for every trial. Its second dimension is equal to the maximum number of licktimes recorded for that file. Writing
+\begin{lstlisting}[language=Python]
+licktimes = f['licktimes']
+print(licktimes[75,:])
+\end{lstlisting}
+will print out the licktimes for trial 75. A "-1" signifies a dummy value and can be ignored.
+
+\end{document}
+This is never printed
