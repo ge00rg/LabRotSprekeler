@@ -235,3 +235,81 @@ def SVM_hitmiss_combined(filename, svm_kernel='linear', cv=4):
         #classifier and scores
         
     return sc, bals, ns
+
+def SVM_hitmiss_combined_window(filename, start, stop, base='frac', svm_kernel='linear', cv=4):
+    '''
+    Trains an SVM on the Ca2+ data of all dendrites to detect/predict hits/misses.
+    
+    filename: string, name of experiment file
+    start: int, starting frame of averaging window
+    stop: int, final frame of averaging window
+    base: string, mode of subtracting baseline.
+        'normal': always subtract full baseline
+        'frac': subtract baseline proportional to fraction of post-stiumulus frames
+    svm_kernel: string, specifies svm kernel to use for training
+    cv: int, number of folds for cv
+    
+    returns: n_stims x cv ndarray. Each row holds the accuracy values for each fold for one stimulus strength.
+    '''
+    assert(stop > start), "window needs to have positive size."
+    assert(start >= 0), "start needs to be larger or equal to zero."
+    
+    f = h5py.File(filename+".hdf5", "r")
+    data = f['data']
+    meta = f['meta']
+    stims = np.unique(f['meta'][:,1])
+    #load data and stims
+    
+    assert(stop <= data.shape[2]), "Stop has to be smaller or equal to the number of frames"
+    
+    sc = np.zeros((stims.shape[0], cv))
+    #will hold scores
+    
+    for k, amp in enumerate(stims):
+        baseline = np.mean(data[:,:,:58], axis=2).reshape(data.shape[0], data.shape[1], 1)
+        #baseline as average over first second for each trial
+        
+        #for 'frac' mode, make the weighting of the baseline proportional the the fraction of post stimulus frames
+        if base == 'normal':
+            bl_factor = 1
+        if base == 'frac':
+            n_pre = 58 - start
+            n_post = stop - 58
+            
+            bl_factor = n_post/(n_pre + n_post)
+            #compute baseline weight
+            
+            if n_pre <= 0:
+                #start >= 58 -> everything is post stimulus
+                bl_factor = 1
+            if n_post <= 0:
+                #stop <= 50 -> everything is pre-stimulus
+                bl_factor = 0
+        
+        mn_dnd_chng = np.mean(data[:,:,start:stop]-baseline*bl_factor, axis=2)
+        #mean dendritic change as mean over second second minus baseline
+
+        trials_mask = meta[:,1]==amp
+        #we use only trials with a given stimulus
+        
+        y_score = mn_dnd_chng[trials_mask, :]
+        #scores are mean dendritic changes in these trials
+
+        hit_mask = meta[:, 2]==1
+        #mask of hit-trials
+
+        end_mask = hit_mask[trials_mask]
+        #apply trials_mask to hit-mask
+        
+        y_true = (end_mask-0.5)*2
+        #if hit, 1, else -1
+
+        clf = svm.SVC(kernel=svm_kernel, class_weight='balanced')
+        try:
+            scores = cross_val_score(clf, y_score, y_true.reshape(y_true.shape[0]), cv=cv)
+        except ValueError:
+            scores = np.zeros(cv)
+        sc[k,:] = scores
+        #classifier and scores. If not enough instances of either class, return all zeros and continue loop.
+        
+    return sc
