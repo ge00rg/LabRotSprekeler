@@ -76,13 +76,16 @@ def get_DIs(filename, amp, permute=False):
     data = f['data']
     meta = f['meta']
     
+    g = h5py.File(filename[:-6]+"roi.hdf5", "r")
+    motion_mask = (g['inFrameDend'][:].astype(bool)).reshape(g['inFrameDend'].shape[0])
+    
     stims = np.unique(h5py.File(filename+".hdf5", "r")['meta'][:,1])[1:]
     
     assert(amp in list(stims)), "this stimAmp was not used in chosen experiment. Cose one from {}.".format(stims)
 
-    baseline = np.mean(data[:,:,:58], axis=2).reshape(data.shape[0], data.shape[1], 1)
+    baseline = np.mean(data[:,motion_mask,:58], axis=2).reshape(data.shape[0], np.sum(motion_mask), 1)
 
-    mn_dnd_chng = np.mean(data[:,:,58:116]-baseline, axis=2)
+    mn_dnd_chng = np.mean(data[:,motion_mask,58:116]-baseline, axis=2)
 
     present_mask = meta[:,1]==amp
     absent_mask = meta[:,1]==0
@@ -95,8 +98,52 @@ def get_DIs(filename, amp, permute=False):
         y_true = np.random.permutation(y_true)
     
     DIs = []
-    for site in range(data.shape[1]):
+    for site in range(np.sum(motion_mask)):
         y_score = mn_dnd_chng[trials_mask, site]
     
         DIs.append((roc_auc_score(y_true, y_score)-0.5)*2)
     return DIs
+
+def get_DIs_psycho(filename, amp, permute=False):
+    f = h5py.File(filename+".hdf5", "r")
+    
+    #average delta F
+    #1s = 59 frames
+    data = f['data']
+    meta = f['meta']
+    
+    g = h5py.File(filename[:-6]+"roi.hdf5", "r")
+    motion_mask = (g['inFrameDend'][:].astype(bool)).reshape(g['inFrameDend'].shape[0])
+    
+    stims = np.unique(h5py.File(filename+".hdf5", "r")['meta'][:,1])[:]
+    
+    assert(amp in list(stims)), "this stimAmp was not used in chosen experiment. Cose one from {}.".format(stims)
+
+    baseline = np.mean(data[:,motion_mask,:58], axis=2).reshape(data.shape[0], np.sum(motion_mask), 1)
+
+    mn_dnd_chng = np.mean(data[:,motion_mask,58:116]-baseline, axis=2)
+
+    present_mask = meta[:,1]==amp
+    absent_mask = meta[:,1]==0
+    
+    trials_mask = np.logical_or(present_mask, absent_mask)
+    hit_mask = meta[:, 2]==1
+    
+    #print(data[trials_mask])
+    
+    end_mask = hit_mask[trials_mask]
+    y_true = (end_mask-0.5)*2
+    
+    #compute balance in y_true
+    balance = np.sum(end_mask)/end_mask.shape[0]
+    n_y = end_mask.shape[0]
+    
+    if permute==True:
+        y_true = np.random.permutation(y_true)
+    
+    DIs = []
+    for site in range(np.sum(motion_mask)):
+        y_score = mn_dnd_chng[trials_mask, site]
+    
+        DIs.append((roc_auc_score(y_true, y_score)-0.5)*2)
+    return DIs, balance, n_y
