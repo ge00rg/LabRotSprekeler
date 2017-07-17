@@ -1,7 +1,11 @@
-\frametitle{Mante - Approach - Results}
-\begin{center}
-	\begin{figure}
-	\caption*{Solve Problem with combined SVM first}
-      \includegraphics[width=1.0\textwidth]{reg_inte_placeholder.png}
-	\end{figure}
-	\end{center}
+\frametitle{Population Response in Task Variable Space}
+\only<+->{
+We would like these $\boldsymbol{\beta^{\nu}_{max}}$ to be the basis vectors of our new coordinate system, however, they are not yet orthogonal.}
+\only<+->{We fix this by applying QR-decomposition to
+$$
+\mathbf{B^{max}}=
+\begin{bmatrix}
+\mathbf{\beta^1_{max}} & \mathbf{\beta^2_{max}}
+\end{bmatrix} = \mathbf{QR}
+$$
+where $\mathbf{Q}$ is an orthogonal matrix whose columns $\boldsymbol{\beta^{\nu}_{\bot}}$ are the \textbf{basis vectors} of our new coordinate system. We can now transform our data into it.}
