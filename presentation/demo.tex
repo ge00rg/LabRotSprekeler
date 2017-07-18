@@ -195,6 +195,14 @@ The goal of this project is to investigate the following:
 
 \end{frame}
 
+\begin{frame}[fragile]{SVM Specifics}
+\begin{itemize}
+\item All data are normalized to zero mean and unit variance
+\item Crossvalidation is performed to conrol for overfitting
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}[fragile]{SVM - Most Accurate Dendrites}
 \begin{table}
     \caption*{Stimulus strength 1 (near thereshold)}
@@ -345,6 +353,36 @@ We can use the previously best discriminating dendrites (SVM/DI).}
       \includegraphics[width=1.0\textwidth]{combined_presence.png}
 	\end{figure}
 	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{data_p_tot.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
+Performance on global presence detection: \newline
+Mean: 0.68 \newline
+Standard deviation: 0.08
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{data_hm_tot.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
+Performance on global presence detection: \newline
+Mean: 0.71 \newline
+Standard deviation: 0.1
 \end{frame}
 
 \begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection}
