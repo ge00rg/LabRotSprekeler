@@ -96,6 +96,8 @@ The goal of this project is to investigate the following:
 \only<+->{
 \item What is the relationship between Ca2+ activity and stimulus intensity/behavior}
 \only<+->{
+\item Can we build good classifiers for this data?}
+\only<+->{
 \item Does a multivariate approach give us any significant advantage over a univariate one?}
 \end{itemize}
 \end{frame}
@@ -178,11 +180,25 @@ The goal of this project is to investigate the following:
 \begin{figure}
       \includegraphics[height=0.3\textwidth]{svm_exp1.png}
 	\end{figure}}
-	\only<+->{
-	\begin{figure}
-      \includegraphics[height=0.3\textwidth]{svm_exp.png}
-	\end{figure}}
+	%\only<+->{
+	%\begin{figure}
+    %  \includegraphics[height=0.3\textwidth]{svm_exp.png}
+	%\end{figure}}
 	\end{center}
+	\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    	\only<+->{
+      \begin{figure}
+      \includegraphics[height=0.7\textwidth]{svm_exp2.png}
+      \end{figure}}
+      
+    \column{0.5\textwidth}
+		\only<+->{
+      \begin{figure}
+      \includegraphics[height=0.7\textwidth]{svm_exp3.png}
+      \end{figure}}
+
+  \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Why SVM?}
@@ -217,6 +233,14 @@ The goal of this project is to investigate the following:
       \bottomrule
     \end{tabular}
   \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{SVM - Numbers of Classifying Dendrites by Stimulus}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{n_acc.png}
+	\end{figure}
+	\end{center}
 \end{frame}
 
 \begin{frame}[fragile]{Rank Order Correlation}
@@ -324,6 +348,12 @@ With a monotonicity constraint on $W$.
 	\end{center}
 \end{frame}
 
+\begin{frame}[fragile]{Timing - What if we use different Averaging Windows?}
+So far we have always averaged over the first second after the stimulus. \newline
+
+What if we average over the second before or the second second after the stimulus?
+\end{frame}
+
 \begin{frame}[fragile]{Statistical Significance - Stimulus Presence}
 \begin{center}
 	\begin{figure}
@@ -396,6 +426,16 @@ Standard deviation: 0.08
 	\end{center}
 \end{frame}
 
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{combined_hitmiss.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+
 \begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
 \begin{center}
 	\begin{figure}
@@ -415,34 +455,7 @@ Standard deviation: 0.1
 \begin{center}
 	\begin{figure}
 	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{combined_hitmiss.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
       \includegraphics[width=1.0\textwidth]{combined_hitmiss_alt.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Optimal Averaging Times}
-\begin{center}
-	\begin{figure}
-	\caption*{Dummy}
-      \includegraphics[width=0.6\textwidth]{placeholder_wind_pres.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Optimal Averaging Times - Behavior}
-\begin{center}
-	\begin{figure}
-	\caption*{Dummy}
-      \includegraphics[width=0.6\textwidth]{placeholder_wind_hit.png}
 	\end{figure}
 	\end{center}
 \end{frame}

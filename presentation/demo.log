@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.5)  18 JUL 2017 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.5)  19 JUL 2017 03:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,112 +1352,119 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              for symbol `textbullet' on input line 5.
 
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 101--101
+Overfull \hbox (0.4pt too wide) in paragraph at lines 103--103
 [][]  
  []
 
 [11
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 101--101
+Overfull \hbox (0.4pt too wide) in paragraph at lines 103--103
 [][]  
  []
 
 [12
 
-] [13
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 103--103
+[][]  
+ []
+
+[13
+
+] [14
 
 ]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <data_p.png, id=128, 1606.0pt x 1204.5pt>
+ (./demo.vrb <data_p.png, id=133, 1606.0pt x 1204.5pt>
 File: data_p.png Graphic file (type png)
 
 <use data_p.png>
 Package pdftex.def Info: data_p.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 116--116
+Overfull \hbox (0.4pt too wide) in paragraph at lines 118--118
 [][]  
  []
 
 
-Overfull \vbox (24.09225pt too high) detected at line 116
+Overfull \vbox (24.09225pt too high) detected at line 118
  []
 
-[14
+[15
 
  <./data_p.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <roc_exp.png, id=135, 722.7pt x 542.025pt>
+ (./demo.vrb <roc_exp.png, id=140, 722.7pt x 542.025pt>
 File: roc_exp.png Graphic file (type png)
 
 <use roc_exp.png>
 Package pdftex.def Info: roc_exp.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.46922pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 124--124
+Overfull \hbox (0.4pt too wide) in paragraph at lines 126--126
 [][]  
  []
 
 
-Overfull \vbox (24.10512pt too high) detected at line 124
+Overfull \vbox (24.10512pt too high) detected at line 126
  []
 
-[15
+[16
 
  <./roc_exp.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <roc_four.png, id=142, 433.62pt x 289.08pt>
+ (./demo.vrb <roc_four.png, id=147, 433.62pt x 289.08pt>
 File: roc_four.png Graphic file (type png)
 
 <use roc_four.png>
 Package pdftex.def Info: roc_four.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 132--132
+Overfull \hbox (0.4pt too wide) in paragraph at lines 134--134
 [][]  
  []
 
-[16
+[17
 
  <./roc_four.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <on_vs_off.png, id=149, 433.62pt x 289.08pt>
+ (./demo.vrb <on_vs_off.png, id=154, 433.62pt x 289.08pt>
 File: on_vs_off.png Graphic file (type png)
 
 <use on_vs_off.png>
 Package pdftex.def Info: on_vs_off.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 157--157
+Overfull \hbox (0.4pt too wide) in paragraph at lines 159--159
 [][]  
  []
 
 
-Overfull \vbox (25.1547pt too high) detected at line 157
+Overfull \vbox (25.1547pt too high) detected at line 159
  []
 
-[17
+[18
 
  <./on_vs_off.png>]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb
-<svm_exp1.png, id=157, 281.05pt x 264.187pt>
+<svm_exp1.png, id=162, 281.05pt x 264.187pt>
 File: svm_exp1.png Graphic file (type png)
  <use svm_exp1.png>
 Package pdftex.def Info: svm_exp1.png used on input line 6.
 (pdftex.def)             Requested size: 98.07306pt x 92.1879pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 186--186
+Overfull \hbox (0.4pt too wide) in paragraph at lines 202--202
 [][]  
  []
 
-[18
+[19
 
  <./svm_exp1.png>] (./demo.vrb
 File: svm_exp1.png Graphic file (type png)
@@ -1465,43 +1472,53 @@ File: svm_exp1.png Graphic file (type png)
 Package pdftex.def Info: svm_exp1.png used on input line 6.
 (pdftex.def)             Requested size: 98.07306pt x 92.1879pt.
 
-<svm_exp.png, id=164, 497.86pt x 218.416pt>
-File: svm_exp.png Graphic file (type png)
- <use svm_exp.png>
-Package pdftex.def Info: svm_exp.png used on input line 10.
-(pdftex.def)             Requested size: 210.13292pt x 92.1879pt.
+<svm_exp2.png, id=170, 304.13625pt x 273.02pt>
+File: svm_exp2.png Graphic file (type png)
+ <use svm_exp2.png>
+Package pdftex.def Info: svm_exp2.png used on input line 17.
+(pdftex.def)             Requested size: 119.80997pt x 107.55098pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 186--186
+Overfull \hbox (0.4pt too wide) in paragraph at lines 202--202
 [][]  
  []
 
-[19
 
- <./svm_exp.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 196--196
-[][]  
+Overfull \vbox (12.73026pt too high) detected at line 202
  []
 
 [20
 
-]
-\openout4 = `demo.vrb'.
+ <./svm_exp2.png>] (./demo.vrb
+File: svm_exp1.png Graphic file (type png)
+ <use svm_exp1.png>
+Package pdftex.def Info: svm_exp1.png used on input line 6.
+(pdftex.def)             Requested size: 98.07306pt x 92.1879pt.
+File: svm_exp2.png Graphic file (type png)
+ <use svm_exp2.png>
+Package pdftex.def Info: svm_exp2.png used on input line 17.
+(pdftex.def)             Requested size: 119.80997pt x 107.55098pt.
 
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 204--204
+<svm_exp3.png, id=178, 298.11375pt x 273.02pt>
+File: svm_exp3.png Graphic file (type png)
+ <use svm_exp3.png>
+Package pdftex.def Info: svm_exp3.png used on input line 23.
+(pdftex.def)             Requested size: 117.43748pt x 107.55098pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 202--202
 [][]  
+ []
+
+
+Overfull \vbox (12.73026pt too high) detected at line 202
  []
 
 [21
 
-]
+ <./svm_exp3.png>]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 220--220
+Overfull \hbox (0.4pt too wide) in paragraph at lines 212--212
 [][]  
  []
 
@@ -1511,203 +1528,204 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 220--220
 \openout4 = `demo.vrb'.
 
  (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 235--235
+Overfull \hbox (0.4pt too wide) in paragraph at lines 220--220
 [][]  
  []
 
 [23
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 235--235
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 236--236
 [][]  
  []
 
 [24
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 235--235
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb <n_acc.png, id=202, 433.62pt x 289.08pt>
+File: n_acc.png Graphic file (type png)
+ <use n_acc.png>
+Package pdftex.def Info: n_acc.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 244--244
 [][]  
  []
 
 [25
 
-]
-Overfull \hbox (0.4pt too wide) in paragraph at lines 243--243
+ <./n_acc.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 259--259
 [][]  
  []
 
 [26
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb <rank_presence.png, id=213, 2409.0pt x 1606.0pt>
-File: rank_presence.png Graphic file (type png)
-
-<use rank_presence.png>
-Package pdftex.def Info: rank_presence.png used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 204.84193pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 251--251
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 259--259
 [][]  
- []
-
-
-Overfull \vbox (25.12775pt too high) detected at line 251
  []
 
 [27
 
- <./rank_presence.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<tuning.png, id=222, 433.62pt x 289.08pt>
-File: tuning.png Graphic file (type png)
- <use tuning.png>
-Package pdftex.def Info: tuning.png used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
-)
+] (./demo.vrb)
 Overfull \hbox (0.4pt too wide) in paragraph at lines 259--259
 [][]  
  []
 
 [28
 
- <./tuning.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<tuning_ca2+single.png, id=229, 527.75168pt x 282.21436pt>
-File: tuning_ca2+single.png Graphic file (type png)
-
-<use tuning_ca2+single.png>
-Package pdftex.def Info: tuning_ca2+single.png used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 164.32175pt.
-)
+]
 Overfull \hbox (0.4pt too wide) in paragraph at lines 267--267
 [][]  
  []
 
 [29
 
- <./tuning_ca2+single.png>]
+]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb
-<tuning_ca2+.png, id=236, 2409.0pt x 1606.0pt>
-File: tuning_ca2+.png Graphic file (type png)
- <use tuning_ca2+.png>
-Package pdftex.def Info: tuning_ca2+.png used on input line 4.
+ (./demo.vrb <rank_presence.png, id=232, 2409.0pt x 1606.0pt>
+File: rank_presence.png Graphic file (type png)
+
+<use rank_presence.png>
+Package pdftex.def Info: rank_presence.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 204.84193pt.
 )
 Overfull \hbox (0.4pt too wide) in paragraph at lines 275--275
 [][]  
  []
 
+
+Overfull \vbox (25.12775pt too high) detected at line 275
+ []
+
 [30
 
- <./tuning_ca2+.png>]
+ <./rank_presence.png>]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb
-<data_hm.png, id=243, 1606.0pt x 1204.5pt>
-File: data_hm.png Graphic file (type png)
- <use data_hm.png>
-Package pdftex.def Info: data_hm.png used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
+<tuning.png, id=241, 433.62pt x 289.08pt>
+File: tuning.png Graphic file (type png)
+ <use tuning.png>
+Package pdftex.def Info: tuning.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
 Overfull \hbox (0.4pt too wide) in paragraph at lines 283--283
 [][]  
  []
 
-
-Overfull \vbox (24.09225pt too high) detected at line 283
- []
-
 [31
 
- <./data_hm.png>]
+ <./tuning.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 299--299
+ (./demo.vrb
+<tuning_ca2+single.png, id=249, 527.75168pt x 282.21436pt>
+File: tuning_ca2+single.png Graphic file (type png)
+
+<use tuning_ca2+single.png>
+Package pdftex.def Info: tuning_ca2+single.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 164.32175pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 291--291
 [][]  
  []
 
 [32
 
+ <./tuning_ca2+single.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb
+<tuning_ca2+.png, id=256, 2409.0pt x 1606.0pt>
+File: tuning_ca2+.png Graphic file (type png)
+ <use tuning_ca2+.png>
+Package pdftex.def Info: tuning_ca2+.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 204.84193pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 299--299
+[][]  
+ []
+
+[33
+
+ <./tuning_ca2+.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb
+<data_hm.png, id=263, 1606.0pt x 1204.5pt>
+File: data_hm.png Graphic file (type png)
+ <use data_hm.png>
+Package pdftex.def Info: data_hm.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 307--307
+[][]  
+ []
+
+
+Overfull \vbox (24.09225pt too high) detected at line 307
+ []
+
+[34
+
+ <./data_hm.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 323--323
+[][]  
+ []
+
+[35
+
 ]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <fraction.png, id=256, 433.62pt x 289.08pt>
+ (./demo.vrb <fraction.png, id=275, 433.62pt x 289.08pt>
 File: fraction.png Graphic file (type png)
 
 <use fraction.png>
 Package pdftex.def Info: fraction.png used on input line 5.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 308--308
+Overfull \hbox (0.4pt too wide) in paragraph at lines 332--332
 [][]  
  []
 
 
-Overfull \vbox (25.1547pt too high) detected at line 308
+Overfull \vbox (25.1547pt too high) detected at line 332
  []
 
-[33
+[36
 
  <./fraction.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <transrank.png, id=265, 433.62pt x 289.08pt>
+ (./demo.vrb <transrank.png, id=284, 433.62pt x 289.08pt>
 File: transrank.png Graphic file (type png)
 
 <use transrank.png>
 Package pdftex.def Info: transrank.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 325--325
+Overfull \hbox (0.4pt too wide) in paragraph at lines 349--349
 [][]  
  []
 
-[34
+[37
 
  <./transrank.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb <statsig.png, id=272, 433.62pt x 289.08pt>
-File: statsig.png Graphic file (type png)
-
-<use statsig.png>
-Package pdftex.def Info: statsig.png used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 333--333
-[][]  
- []
-
-[35
-
- <./statsig.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb <statsig_b.png, id=279, 462.528pt x 216.81pt>
-File: statsig_b.png Graphic file (type png)
-
-<use statsig_b.png>
-Package pdftex.def Info: statsig_b.png used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 144.0478pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 342--342
-[][]  
- []
-
-[36
-
- <./statsig_b.png>] [37
-
-]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb)
@@ -1717,82 +1735,58 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 355--355
 
 [38
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 355--355
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb <statsig.png, id=297, 433.62pt x 289.08pt>
+File: statsig.png Graphic file (type png)
+ <use statsig.png>
+Package pdftex.def Info: statsig.png used on input line 4.
+(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 363--363
 [][]  
  []
 
 [39
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 355--355
+ <./statsig.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb <statsig_b.png, id=304, 462.528pt x 216.81pt>
+File: statsig_b.png Graphic file (type png)
+
+<use statsig_b.png>
+Package pdftex.def Info: statsig_b.png used on input line 5.
+(pdftex.def)             Requested size: 307.28987pt x 144.0478pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 372--372
 [][]  
  []
 
 [40
 
+ <./statsig_b.png>] [41
+
 ]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <rank_DI_SVM.png, id=307, 2409.0pt x 1606.0pt>
-File: rank_DI_SVM.png Graphic file (type png)
-
-<use rank_DI_SVM.png>
-Package pdftex.def Info: rank_DI_SVM.png used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 204.84193pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 364--364
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 385--385
 [][]  
- []
-
-[41
-
- <./rank_DI_SVM.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<combined_presence.png, id=314, 433.62pt x 289.08pt>
-File: combined_presence.png Graphic file (type png)
-
-<use combined_presence.png>
-Package pdftex.def Info: combined_presence.png used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 373--373
-[][]  
- []
-
-
-Overfull \vbox (14.60469pt too high) detected at line 373
  []
 
 [42
 
- <./combined_presence.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<data_p_tot.png, id=321, 1606.0pt x 1204.5pt>
-File: data_p_tot.png Graphic file (type png)
- <use data_p_tot.png>
-Package pdftex.def Info: data_p_tot.png used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 382--382
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 385--385
 [][]  
- []
-
-
-Overfull \vbox (24.09225pt too high) detected at line 382
  []
 
 [43
 
- <./data_p_tot.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 388--388
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 385--385
 [][]  
  []
 
@@ -1801,392 +1795,403 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 388--388
 ]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <combined_presence_alt.png, id=335, 433.62pt x 289.08pt>
+ (./demo.vrb <rank_DI_SVM.png, id=333, 2409.0pt x 1606.0pt>
+File: rank_DI_SVM.png Graphic file (type png)
+
+<use rank_DI_SVM.png>
+Package pdftex.def Info: rank_DI_SVM.png used on input line 5.
+(pdftex.def)             Requested size: 307.28987pt x 204.84193pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 394--394
+[][]  
+ []
+
+[45
+
+ <./rank_DI_SVM.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb
+<combined_presence.png, id=340, 433.62pt x 289.08pt>
+File: combined_presence.png Graphic file (type png)
+
+<use combined_presence.png>
+Package pdftex.def Info: combined_presence.png used on input line 5.
+(pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 403--403
+[][]  
+ []
+
+
+Overfull \vbox (14.60469pt too high) detected at line 403
+ []
+
+[46
+
+ <./combined_presence.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb
+<data_p_tot.png, id=347, 1606.0pt x 1204.5pt>
+File: data_p_tot.png Graphic file (type png)
+ <use data_p_tot.png>
+Package pdftex.def Info: data_p_tot.png used on input line 5.
+(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 412--412
+[][]  
+ []
+
+
+Overfull \vbox (24.09225pt too high) detected at line 412
+ []
+
+[47
+
+ <./data_p_tot.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 418--418
+[][]  
+ []
+
+[48
+
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb <combined_presence_alt.png, id=359, 433.62pt x 289.08pt>
 File: combined_presence_alt.png Graphic file (type png)
 
 <use combined_presence_alt.png>
 Package pdftex.def Info: combined_presence_alt.png used on input line 5.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 397--397
+Overfull \hbox (0.4pt too wide) in paragraph at lines 427--427
 [][]  
  []
 
 
-Overfull \vbox (14.60469pt too high) detected at line 397
+Overfull \vbox (14.60469pt too high) detected at line 427
  []
 
-[45
+[49
 
  <./combined_presence_alt.png>]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb
-<data_hm_tot.png, id=342, 1606.0pt x 1204.5pt>
-File: data_hm_tot.png Graphic file (type png)
- <use data_hm_tot.png>
-Package pdftex.def Info: data_hm_tot.png used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 406--406
-[][]  
- []
-
-
-Overfull \vbox (24.09225pt too high) detected at line 406
- []
-
-[46
-
- <./data_hm_tot.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 412--412
-[][]  
- []
-
-[47
-
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb <combined_hitmiss.png, id=354, 433.62pt x 289.08pt>
+<combined_hitmiss.png, id=367, 433.62pt x 289.08pt>
 File: combined_hitmiss.png Graphic file (type png)
-
-<use combined_hitmiss.png>
+ <use combined_hitmiss.png>
 Package pdftex.def Info: combined_hitmiss.png used on input line 5.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 421--421
+Overfull \hbox (0.4pt too wide) in paragraph at lines 436--436
 [][]  
  []
 
-[48
+[50
 
  <./combined_hitmiss.png>]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb
-<combined_hitmiss_alt.png, id=361, 433.62pt x 289.08pt>
+<data_hm_tot.png, id=374, 1606.0pt x 1204.5pt>
+File: data_hm_tot.png Graphic file (type png)
+ <use data_hm_tot.png>
+Package pdftex.def Info: data_hm_tot.png used on input line 5.
+(pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
+)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 446--446
+[][]  
+ []
+
+
+Overfull \vbox (24.09225pt too high) detected at line 446
+ []
+
+[51
+
+ <./data_hm_tot.png>]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 452--452
+[][]  
+ []
+
+[52
+
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb <combined_hitmiss_alt.png, id=386, 433.62pt x 289.08pt>
 File: combined_hitmiss_alt.png Graphic file (type png)
 
 <use combined_hitmiss_alt.png>
 Package pdftex.def Info: combined_hitmiss_alt.png used on input line 5.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 430--430
+Overfull \hbox (0.4pt too wide) in paragraph at lines 461--461
 [][]  
  []
 
-[49
+[53
 
- <./combined_hitmiss_alt.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<placeholder_wind_pres.png, id=369, 867.9627pt x 867.24pt>
-File: placeholder_wind_pres.png Graphic file (type png)
-
-<use placeholder_wind_pres.png>
-Package pdftex.def Info: placeholder_wind_pres.png used on input line 5.
-(pdftex.def)             Requested size: 184.3758pt x 184.21658pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 439--439
-[][]  
- []
-
-
-Overfull \vbox (4.5024pt too high) detected at line 439
- []
-
-[50
-
- <./placeholder_wind_pres.png>]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb
-<placeholder_wind_hit.png, id=376, 921.98453pt x 866.5173pt>
-File: placeholder_wind_hit.png Graphic file (type png)
-
-<use placeholder_wind_hit.png>
-Package pdftex.def Info: placeholder_wind_hit.png used on input line 5.
-(pdftex.def)             Requested size: 184.3758pt x 173.27394pt.
-)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 448--448
-[][]  
- []
-
-[51
-
- <./placeholder_wind_hit.png>] [52
+ <./combined_hitmiss_alt.png>] [54
 
 ]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb
-<coord.png, id=388, 1606.0pt x 1204.5pt>
+<coord.png, id=398, 1606.0pt x 1204.5pt>
 File: coord.png Graphic file (type png)
  <use coord.png>
 Package pdftex.def Info: coord.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 458--458
+Overfull \hbox (0.4pt too wide) in paragraph at lines 471--471
 [][]  
  []
 
 
-Overfull \vbox (24.09225pt too high) detected at line 458
+Overfull \vbox (24.09225pt too high) detected at line 471
  []
 
-[53
+[55
 
  <./coord.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <traj.png, id=395, 1606.0pt x 1204.5pt>
+ (./demo.vrb <traj.png, id=406, 1606.0pt x 1204.5pt>
 File: traj.png Graphic file (type png)
 
 <use traj.png>
 Package pdftex.def Info: traj.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 466--466
+Overfull \hbox (0.4pt too wide) in paragraph at lines 479--479
 [][]  
  []
 
 
-Overfull \vbox (24.09225pt too high) detected at line 466
+Overfull \vbox (24.09225pt too high) detected at line 479
  []
 
-[54
+[56
 
  <./traj.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <new_coord.png, id=402, 1606.0pt x 1204.5pt>
+ (./demo.vrb <new_coord.png, id=413, 1606.0pt x 1204.5pt>
 File: new_coord.png Graphic file (type png)
 
 <use new_coord.png>
 Package pdftex.def Info: new_coord.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 474--474
+Overfull \hbox (0.4pt too wide) in paragraph at lines 487--487
 [][]  
  []
 
 
-Overfull \vbox (24.09225pt too high) detected at line 474
+Overfull \vbox (24.09225pt too high) detected at line 487
  []
 
-[55
+[57
 
  <./new_coord.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <trafo.png, id=410, 1063.975pt x 437.635pt>
+ (./demo.vrb <trafo.png, id=420, 1063.975pt x 437.635pt>
 File: trafo.png Graphic file (type png)
 
 <use trafo.png>
 Package pdftex.def Info: trafo.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 126.39003pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 482--482
+Overfull \hbox (0.4pt too wide) in paragraph at lines 495--495
 [][]  
  []
 
-[56
+[58
 
  <./trafo.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <trafo_final.png, id=417, 1606.0pt x 1204.5pt>
+ (./demo.vrb <trafo_final.png, id=427, 1606.0pt x 1204.5pt>
 File: trafo_final.png Graphic file (type png)
 
 <use trafo_final.png>
 Package pdftex.def Info: trafo_final.png used on input line 4.
 (pdftex.def)             Requested size: 307.28987pt x 230.45636pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 490--490
+Overfull \hbox (0.4pt too wide) in paragraph at lines 503--503
 [][]  
  []
 
 
-Overfull \vbox (24.09225pt too high) detected at line 490
+Overfull \vbox (24.09225pt too high) detected at line 503
  []
 
-[57
+[59
 
  <./trafo_final.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <reg.png, id=424, 578.16pt x 578.16pt>
+ (./demo.vrb <reg.png, id=434, 578.16pt x 578.16pt>
 File: reg.png Graphic file (type png)
 
 <use reg.png>
 Package pdftex.def Info: reg.png used on input line 5.
 (pdftex.def)             Requested size: 215.10196pt x 215.09799pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 499--499
+Overfull \hbox (0.4pt too wide) in paragraph at lines 512--512
 [][]  
  []
 
 
-Overfull \vbox (35.3838pt too high) detected at line 499
+Overfull \vbox (35.3838pt too high) detected at line 512
  []
 
-[58
+[60
 
  <./reg.png>]
 \openout4 = `demo.vrb'.
 
- (./demo.vrb <reg_sum.png, id=431, 578.16pt x 578.16pt>
+ (./demo.vrb <reg_sum.png, id=441, 578.16pt x 578.16pt>
 File: reg_sum.png Graphic file (type png)
 
 <use reg_sum.png>
 Package pdftex.def Info: reg_sum.png used on input line 5.
 (pdftex.def)             Requested size: 215.10196pt x 215.09799pt.
 )
-Overfull \hbox (0.4pt too wide) in paragraph at lines 508--508
+Overfull \hbox (0.4pt too wide) in paragraph at lines 521--521
 [][]  
  []
 
 
-Overfull \vbox (35.3838pt too high) detected at line 508
+Overfull \vbox (35.3838pt too high) detected at line 521
  []
 
-[59
+[61
 
- <./reg_sum.png>] [60
+ <./reg_sum.png>] [62
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>] [6
-1
+3
 
 ]
 \openout4 = `demo.vrb'.
 
  (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 532--532
-[][]  
- []
-
-[62
-
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 532--532
-[][]  
- []
-
-[63
-
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 532--532
+Overfull \hbox (0.4pt too wide) in paragraph at lines 545--545
 [][]  
  []
 
 [64
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 554--554
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 545--545
 [][]  
  []
 
 [65
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 554--554
+Overfull \hbox (0.4pt too wide) in paragraph at lines 545--545
 [][]  
  []
 
 [66
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 554--554
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 567--567
 [][]  
  []
 
 [67
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 554--554
+Overfull \hbox (0.4pt too wide) in paragraph at lines 567--567
 [][]  
  []
 
 [68
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 568--568
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 567--567
 [][]  
  []
 
 [69
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 568--568
+Overfull \hbox (0.4pt too wide) in paragraph at lines 567--567
 [][]  
  []
 
 [70
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 568--568
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 581--581
 [][]  
  []
 
 [71
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 584--584
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 581--581
 [][]  
  []
 
 [72
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 599--599
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 581--581
 [][]  
  []
 
 [73
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 599--599
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 597--597
 [][]  
  []
 
 [74
 
-] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 599--599
+]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 612--612
 [][]  
  []
 
 [75
 
-]
-\openout4 = `demo.vrb'.
-
- (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 619--619
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 612--612
 [][]  
  []
 
 [76
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 619--619
+Overfull \hbox (0.4pt too wide) in paragraph at lines 612--612
 [][]  
  []
 
@@ -2196,14 +2201,14 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 619--619
 \openout4 = `demo.vrb'.
 
  (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 631--631
+Overfull \hbox (0.4pt too wide) in paragraph at lines 632--632
 [][]  
  []
 
 [78
 
 ] (./demo.vrb)
-Overfull \hbox (0.4pt too wide) in paragraph at lines 631--631
+Overfull \hbox (0.4pt too wide) in paragraph at lines 632--632
 [][]  
  []
 
@@ -2227,6 +2232,23 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 644--644
 [81
 
 ]
+\openout4 = `demo.vrb'.
+
+ (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 657--657
+[][]  
+ []
+
+[82
+
+] (./demo.vrb)
+Overfull \hbox (0.4pt too wide) in paragraph at lines 657--657
+[][]  
+ []
+
+[83
+
+]
 \tf@nav=\write6
 \openout6 = `demo.nav'.
 
@@ -2236,11 +2258,11 @@ Overfull \hbox (0.4pt too wide) in paragraph at lines 644--644
 \tf@snm=\write8
 \openout8 = `demo.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 646.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 646.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 659.
  (./demo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 646.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 646.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 659.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 659.
 Package rerunfilecheck Info: File `demo.out' has not changed.
 (rerunfilecheck)             Checksum: 2B27589ECACE2B320664539F41D2BA00;252.
 
@@ -2251,12 +2273,12 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 659.
  ) 
 Here is how much of TeX's memory you used:
- 31844 strings out of 493029
- 756405 string characters out of 6136235
- 936293 words of memory out of 5000000
+ 31852 strings out of 493029
+ 756344 string characters out of 6136235
+ 936292 words of memory out of 5000000
  34361 multiletter control sequences out of 15000+600000
  23544 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2283,10 +2305,10 @@ nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfso0800
 .pfb>
-Output written on demo.pdf (81 pages, 7136749 bytes).
+Output written on demo.pdf (83 pages, 5733951 bytes).
 PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 695 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 176 named destinations out of 1000 (max. 500000)
  268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
