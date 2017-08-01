@@ -14,8 +14,8 @@
 
 \usepackage{bibentry}
 
-\title{Uni- and Multivariate Analysis of Dendritic Ca2+ Data}
-\subtitle{In a Stimulus Detection Task}
+\title{Dendritic Ca2+ as a Predictor of Stimulus Perception and Behavior}
+\subtitle{Uni- and Multivariate Analysis}
 \date{\today}
 %\date{}
 \author{Georg Chechelnizki}
@@ -29,10 +29,10 @@
 
 \maketitle
 
-\begin{frame}{Table of contents}
-  \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
-\end{frame}
+%\begin{frame}{Table of contents}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \tableofcontents[hideallsubsections]
+%\end{frame}
 
 \section{Introduction}
 
@@ -54,6 +54,23 @@ Takahashi et al. 2016
   \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]{The Data - Behavioral}
+	\begin{center}
+	\begin{figure}
+      \includegraphics[width=\textwidth]{lickplot_single.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{The Data - Psychometric Curve}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=\textwidth]{psychometric.png}
+	\end{figure}
+	\end{center}
+	
+\end{frame}
+
 \begin{frame}[fragile]{The Data - Neuronal}
 	\begin{center}
 	\begin{figure}
@@ -72,23 +89,6 @@ Takahashi et al. 2016
 	\end{center}
 \end{frame}
 
-\begin{frame}[fragile]{The Data - Behavioral}
-	\begin{center}
-	\begin{figure}
-      \includegraphics[width=\textwidth]{lickplot_single.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{The Data - Psychometric Curve}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=\textwidth]{psychometric.png}
-	\end{figure}
-	\end{center}
-	
-\end{frame}
-
 \section{Goal}
 \begin{frame}[fragile]{Goal}
 The goal of this project is to investigate the following:
@@ -96,13 +96,62 @@ The goal of this project is to investigate the following:
 \only<+->{
 \item What is the relationship between Ca2+ activity and stimulus intensity/behavior}
 \only<+->{
-\item Can we build good classifiers for this data?}
+\item Can we build predictive classifiers for this data?}
 \only<+->{
 \item Does a multivariate approach give us any significant advantage over a univariate one?}
 \end{itemize}
 \end{frame}
 
 \section{Univariate Analysis}
+
+\begin{frame}[fragile]{SVM - What is an SVM?}
+\begin{columns}[T,onlytextwidth]
+\column{0.5\textwidth}
+\only<1->{
+\begin{center}
+\begin{figure}
+      \includegraphics[height=0.6\textwidth]{svm_exp1.png}
+	\end{figure}}
+	%\only<+->{
+	%\begin{figure}
+    %  \includegraphics[height=0.3\textwidth]{svm_exp.png}
+	%\end{figure}}
+	\end{center}
+\column{0.5\textwidth}
+\only<4->{
+SMVs...
+\begin{itemize}
+\item are a staple of machine learning
+\item have a regularization parameter that can combat overfitting
+\item are good for small samples with many features (in theory)
+\end{itemize}
+}
+\end{columns}
+	\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    	\only<2->{
+      \begin{figure}
+      \includegraphics[height=0.7\textwidth]{svm_exp2.png}
+      \end{figure}}
+      
+    \column{0.5\textwidth}
+		\only<3->{
+      \begin{figure}
+      \includegraphics[height=0.7\textwidth]{svm_exp3.png}
+      \end{figure}}
+
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Specifics}
+\begin{itemize}
+\only<+->{
+\item All data are normalized to zero mean and unit variance}
+\only<+->{
+\item Crossvalidation is performed to conrol for overfitting}
+\end{itemize}
+
+\end{frame}
 
 \begin{frame}[fragile]{Stimulus Presence Detection}
 %\begin{itemize}
@@ -116,6 +165,359 @@ The goal of this project is to investigate the following:
 	\end{figure}
 	\end{center}
 \end{frame}
+
+\begin{frame}[fragile]{SVM - Most Accurate Dendrites}
+%\begin{table}
+%    \caption*{Stimulus strength 1 (near thereshold)}
+%    \begin{tabular}{c|c|c}
+%      \toprule
+%      Dendrite \# & $\mu_{acc}$ & $\sigma_{acc}$\\
+%      \midrule
+%      57 & 0.70 & 0.12\\
+%      53 & 0.68 & 0.14\\
+%      48 & 0.63 & 0.13\\
+%      27 & 0.62 & 0.08\\
+%      \bottomrule
+%    \end{tabular}
+%  \end{table}
+
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{presence_single.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+%\begin{frame}[fragile]{SVM - Numbers of Classifying Dendrites by Stimulus}
+%\begin{center}%
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{n_acc.png}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}[fragile]{SVM - Statistical Significance}
+\begin{center}
+\only<+->{
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{statsig_0.png}
+	\end{figure}}
+\only<+->{
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{statsig_1.png}
+	\end{figure}}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Rank Order Correlation}
+\only<+->{
+We want to quantify the similarity between two rank orders of dendrites $R$ and $Q$, which both have length $n$.}
+
+\only<+->{
+\begin{table}
+    \begin{tabular}{c|c|c|c|c}
+      \toprule
+      Dendrite & $R_i$ & $Q_i$ & $R_{acc}$ & $Q_{acc}$\\
+      \midrule
+      1 & 1 & 2 & 0.78 & 0.81\\
+      2 & 2 & 1 & 0.72 & 0.76\\
+      3 & 3 & 3 & 0.65 & 0.70\\
+      4 & 4 & 4 & 0.58 & 0.57\\
+      5 & 5 & 16 & 0.51 & 0.53\\
+      6 & 6 & 75 & 0.53 & 0.48\\
+      7 & 7 & 8 & 0.51 & 0.52\\
+      8 & 8 & 89 & 0.52 & 0.49\\
+      9 & 9 & 100 & 0.50 & 0.51\\
+      ... & ... & ... & ... & ...
+      
+    \end{tabular}
+  \end{table}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]{Rank Order Correlation}
+\only<+->{
+Standard approach: \textbf{Spearman's rank order coefficient} 
+$\boldsymbol{\rho}$}
+
+\only<+->{
+$$
+\rho(R,Q) = 1 - \frac{6\sum_i^nD_i^2}{n(n	^2-1)}
+$$
+}
+
+\only<+->{
+Problem: Many of the dendrites are not significant for classification but affect $\rho$ greatly. We would like to be able to \textbf{weight our} $\mathbf{R}$'s and $\mathbf{Q}$'s.}
+\end{frame}
+
+\begin{frame}{Weighted Rank Order Correlation Coefficient}
+One possible solution:
+$$
+\rho_W(R,Q) = 1-\frac{-2\sum_i^nw_iD_i^2}{\sum_i^nw_i(n-2i+1)^2}
+$$
+With a monotonicity constraint on $W$.
+\end{frame}
+
+\begin{frame}[fragile]{Rank Order Correlations of Dendrites Over Stimuli}
+
+	\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{center}
+    \only<+->{
+	\begin{figure}
+	\caption*{Experiment 1}
+      \includegraphics[width=1.0\textwidth]{rank_presence_0.png}
+	\end{figure}}
+	\end{center}
+	\column{0.5\textwidth}
+	\begin{center}
+	\only<+->{
+	\begin{figure}
+	\caption*{Experiment 2}
+      \includegraphics[width=1.0\textwidth]{rank_presence.png}
+	\end{figure}}
+	\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Responses of One Dendrite to Different Stimuli}
+
+	\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{center}
+    \only<+->{
+	\begin{figure}
+	\caption*{Experiment 1}
+      \includegraphics[width=1.0\textwidth]{tuning_ca2+_single_0.png}
+	\end{figure}}
+	\end{center}
+	\column{0.5\textwidth}
+	\begin{center}
+	\only<+->{
+	\begin{figure}
+	\caption*{Experiment 2}
+      \includegraphics[width=1.3\textwidth]{tuning_ca2+single.png}
+	\end{figure}}
+	\end{center}
+	\end{columns}
+\end{frame}
+
+
+%\begin{frame}[fragile]{Tuning Curves}
+%\begin{center}
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{tuning_ca2+single.png}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+%\begin{frame}[fragile]{Tuning Curves}
+%\begin{center}
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{tuning_ca2+.png}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}[fragile]{Behavior Detection}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{data_hm.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Behavioral Prediction - Most Accurate Dendrites}
+\begin{table}
+    \caption*{Different dataset - Stimulus strength 1 (near thereshold)}
+    \begin{tabular}{c|c|c}
+      \toprule
+      Dendrite \# & $\mu_{acc}$ & $\sigma_{acc}$\\
+      \midrule
+      88 & 0.80 & 0.08\\
+      57 & 0.80 & 0.08\\
+      92 & 0.78 & 0.06\\
+      56 & 0.76 & 0.10\\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Behavioral Predition - Imbalance}
+\begin{center}
+	\begin{figure}
+	  \caption*{$N_{no-lick}$ vs. $N_{lick}$ for all stimuli}
+      \includegraphics[width=1.0\textwidth]{fraction.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+%\begin{frame}[fragile]{Behavoreal Tuning}
+%\begin{center}
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{tuning_ca2+_bb.png}
+%      \caption*{todo:accuracies}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}[fragile]{Rank Order Correlations of Best Behavior and Presence Dendrites}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{tranksrank_3x3.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Timing - What if We Use Different Averaging Windows?}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{timing_exp.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Timing - Statistical Significance}
+\begin{center}
+\only<+->{
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{statsig_t0.png}
+	\end{figure}}
+\only<+->{
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{statsig_t1.png}
+	\end{figure}}
+	\end{center}
+\end{frame}
+
+%\begin{frame}[fragile]{Statistical Significance - Stimulus Presence}
+%\begin{center}
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{statsig.png}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}[fragile]{Statistical Significance - Behavior}
+At threshold stimulus $\approx$ 1
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{statsig_b.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\section{Multivariate SMV Analysis}
+
+\begin{frame}[fragile]{Presence Detection - Feature Selection}
+\only<+->{
+Since we have fewer datapoints per condition (30-50 per class) than features (100-150), we are prone to overfit to noise (which is abundant in our data).}
+
+\only<+->{
+$\Rightarrow$ we have to do \textbf{feature selection}.}
+
+\only<+->{
+We can use the previously best discriminating dendrites.}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection, Experiment 1}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{combined_presence_0.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{combined_hitmiss.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\section{Population Coding}
+
+\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{coord.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{traj.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{new_coord.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+%\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
+%\begin{center}
+%	\begin{figure}
+%      \includegraphics[width=1.0\textwidth]{trafo.png}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
+\begin{center}
+	\begin{figure}
+      \includegraphics[width=1.0\textwidth]{trafo_final.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Population Response in Task Variable Space}
+\begin{center}
+	\begin{figure}
+	\caption*{Solve Problem with combined SVM first}
+      \includegraphics[width=1.0\textwidth]{reg.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Population Response in Task Variable Space}
+\begin{center}
+	\begin{figure}
+	\caption*{Solve Problem with combined SVM first}
+      \includegraphics[width=1.0\textwidth]{reg_sum.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Conclusions}
+\begin{itemize}
+\item We can build high accuracy classifiers based on this data
+\item Multivariate analysis is advantageous
+\item Prestimulus Ca2+ activity does not predict the animal's decision
+\item Different dendrites code for stimulus and behavior
+\item There are very large differences between different animals/experiments
+\item We need more data - particularily for multivariate analysis
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{thebibliography}{9}
+\bibitem {taka} Takahashi, N., Oertner, G. T., Hegemann, P. \& Larkum, E. M. Active cortical dendrites modulate perception. Science 335, 1587-1590 (2016)
+\bibitem {mante} Mante V., Sussillo D., Shenoy KV., Newsome WT. Context-dependent computation by recurrent dynamics in prefrontal cortex. Nature 503, 78-84 (2013)
+\bibitem {pinto} Pinto da Costa, J. New Results in Weighted Correlation and Weighted Principal Component Analysis with Applications, Chapter 2 (2015)
+\end{thebibliography}
+\end{frame}
+
+\section*{Extra Slides}
 
 \begin{frame}[fragile]{ROC}
 \begin{center}
@@ -149,7 +551,7 @@ The goal of this project is to investigate the following:
 %	\end{center}
 %\end{frame}
 
-\begin{frame}[fragile]{$\text{Ca}^{2+}$-Trace of Largest $|\text{DI}|$-Dendrites}
+\begin{frame}[fragile]{$\text{Ca}^{2+}$-Traces of Largest $|\text{AUC}-0.5|$-Dendrites}
 \begin{center}
 	\begin{figure}
       \includegraphics[width=1.0\textwidth]{on_vs_off.png}
@@ -174,106 +576,6 @@ The goal of this project is to investigate the following:
 %  \end{table}
 %\end{frame}
 
-\begin{frame}[fragile]{SVM - What is an SMV?}
-\begin{center}
-\only<+->{
-\begin{figure}
-      \includegraphics[height=0.3\textwidth]{svm_exp1.png}
-	\end{figure}}
-	%\only<+->{
-	%\begin{figure}
-    %  \includegraphics[height=0.3\textwidth]{svm_exp.png}
-	%\end{figure}}
-	\end{center}
-	\begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-    	\only<+->{
-      \begin{figure}
-      \includegraphics[height=0.7\textwidth]{svm_exp2.png}
-      \end{figure}}
-      
-    \column{0.5\textwidth}
-		\only<+->{
-      \begin{figure}
-      \includegraphics[height=0.7\textwidth]{svm_exp3.png}
-      \end{figure}}
-
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Why SVM?}
-
-\begin{itemize}
-\item staple of machine learning
-\item regularization parameter limits overfitting
-\item good for small samples with many features (in theory)
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile]{SVM Specifics}
-\begin{itemize}
-\item All data are normalized to zero mean and unit variance
-\item Crossvalidation is performed to conrol for overfitting
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile]{SVM - Most Accurate Dendrites}
-\begin{table}
-    \caption*{Stimulus strength 1 (near thereshold)}
-    \begin{tabular}{c|c|c}
-      \toprule
-      Dendrite \# & $\mu_{acc}$ & $\sigma_{acc}$\\
-      \midrule
-      57 & 0.70 & 0.12\\
-      53 & 0.68 & 0.14\\
-      48 & 0.63 & 0.13\\
-      27 & 0.62 & 0.08\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\end{frame}
-
-\begin{frame}[fragile]{SVM - Numbers of Classifying Dendrites by Stimulus}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{n_acc.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Rank Order Correlation}
-\only<+->{
-We want to quantify the similarity between two rank orders of dendrites $R$ and $Q$, which both have length $n$.}
-
-\only<+->{
-Standard approach: Spearman's rank order coefficient 
-$$
-\rho(R,Q) = 1 - \frac{6\sum_i^nD_i^2}{n(n	^2-1)}
-$$
-where $D_i=R_i-Q_i$.}
-
-\only<+->{
-Problem: Many of the dendrites are not significant for classification but affect $\rho$ greatly. We would like to be able to \textbf{weight our} $\mathbf{D_i}$'s.}
-\end{frame}
-
-\begin{frame}{Weighted Rank Order Correlation Coefficient}
-One possible soulution:
-$$
-\rho_W(R,Q) = 1-\frac{-2\sum_i^nw_iD_i^2}{\sum_i^nw_i(n-2i+1)^2}
-$$
-With a monotonicity constraint on $W$.
-\end{frame}
-
-\begin{frame}[fragile]{Rank Order Correlations of Dendrites Over Stimuli}
-\begin{center}
-	\begin{figure}\caption*{Weighted rank coefficient $\rho_{\omega}$ (todo: find more optimal weights)}
-      \includegraphics[width=1.0\textwidth]{rank_presence.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
 \begin{frame}[fragile]{Tuning Curves}
 \begin{center}
 	\begin{figure}
@@ -282,253 +584,14 @@ With a monotonicity constraint on $W$.
 	\end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Tuning Curves}
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection, Experiment 2}
 \begin{center}
 	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{tuning_ca2+single.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Tuning Curves}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{tuning_ca2+.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Bevahior Detection}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{data_hm.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Behavioral Prediction - Most Accurate Dendrites}
-\begin{table}
-    \caption*{Different dataset - Stimulus strength 1 (near thereshold)}
-    \begin{tabular}{c|c|c}
-      \toprule
-      Dendrite \# & $\mu_{acc}$ & $\sigma_{acc}$\\
-      \midrule
-      88 & 0.80 & 0.08\\
-      57 & 0.80 & 0.08\\
-      92 & 0.78 & 0.06\\
-      56 & 0.76 & 0.10\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\end{frame}
-
-\begin{frame}[fragile]{Behavorial Predition - Imbalance}
-\begin{center}
-	\begin{figure}
-	  \caption*{$N_{no-lick}$ vs. $N_{lick}$ for all stimuli}
-      \includegraphics[width=1.0\textwidth]{fraction.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-%\begin{frame}[fragile]{Behavoreal Tuning}
-%\begin{center}
-%	\begin{figure}
-%      \includegraphics[width=1.0\textwidth]{tuning_ca2+_bb.png}
-%      \caption*{todo:accuracies}
-%	\end{figure}
-%	\end{center}
-%\end{frame}
-
-\begin{frame}[fragile]{Rank Correlations of Behavoreal and Presence Dendrites}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{transrank.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Timing - What if we use different Averaging Windows?}
-So far we have always averaged over the first second after the stimulus. \newline
-
-What if we average over the second before or the second second after the stimulus?
-\end{frame}
-
-\begin{frame}[fragile]{Statistical Significance - Stimulus Presence}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{statsig.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Statistical Significance - Behavior}
-At threshold stimulus $\approx$ 1
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{statsig_b.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\section{Multivariate SMV Analysis}
-
-\begin{frame}[fragile]{Presence Detection - Feature Selection}
-\only<+->{
-Since we have only few datapoints per condition (30-50 per class) in comparison to the number of features (100-150), we are prone to overfit to noise.}
-
-\only<+->{
-$\Rightarrow$ we have to do \textbf{feature selection}.}
-
-\only<+->{
-We can use the previously best discriminating dendrites (SVM/DI).}
-\end{frame}
-
-\begin{frame}[fragile]{DI and SVM Dendrite Rank Order Correlation}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{rank_DI_SVM.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
       \includegraphics[width=1.0\textwidth]{combined_presence.png}
 	\end{figure}
 	\end{center}
 \end{frame}
 
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{data_p_tot.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
-Performance on global presence detection: \newline
-Mean: 0.68 \newline
-Standard deviation: 0.08
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{combined_presence_alt.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{combined_hitmiss.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{data_hm_tot.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
-Performance on global presence detection: \newline
-Mean: 0.71 \newline
-Standard deviation: 0.1
-\end{frame}
-
-\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
-\begin{center}
-	\begin{figure}
-	%\caption*{todo: tens, improve weights}
-      \includegraphics[width=1.0\textwidth]{combined_hitmiss_alt.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\section{Population Coding}
-
-\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{coord.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{traj.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{new_coord.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{trafo.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Coding - Idea (Mante, Sussillo 2013)}
-\begin{center}
-	\begin{figure}
-      \includegraphics[width=1.0\textwidth]{trafo_final.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Response in Task Variable Space}
-\begin{center}
-	\begin{figure}
-	\caption*{Solve Problem with combined SVM first}
-      \includegraphics[width=0.7\textwidth]{reg.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Population Response in Task Variable Space}
-\begin{center}
-	\begin{figure}
-	\caption*{Solve Problem with combined SVM first}
-      \includegraphics[width=0.7\textwidth]{reg_sum.png}
-	\end{figure}
-	\end{center}
-\end{frame}
-
-\begin{frame}
-\begin{thebibliography}{9}
-\bibitem {taka} Takahashi, N., Oertner, G. T., Hegemann, P. \& Larkum, E. M. Active cortical dendrites modulate perception. Science 335, 1587-1590 (2016)
-\bibitem {mante} Mante V., Sussillo D., Shenoy KV., Newsome WT. Context-dependent computation by recurrent dynamics in prefrontal cortex. Nature 503, 78-84 (2013)
-\bibitem {pinto} Pinto da Costa, J. New Results in Weighted Correlation and Weighted Principal Component Analysis with Applications, Chapter 2 (2015)
-\end{thebibliography}
-\end{frame}
-
-\section*{Extra Slides}
 \begin{frame}[fragile]{Weighted Rank Order Correlation Coefficient}
 \only<+->{
 We want to quantify the similarity between two rank orders of dendrites $R$ and $Q$, which both have length $n$.}
@@ -654,6 +717,63 @@ $$
 \end{bmatrix} = \mathbf{QR}
 $$
 where $\mathbf{Q}$ is an orthogonal matrix whose columns $\boldsymbol{\beta^{\nu}_{\bot}}$ are the \textbf{basis vectors} of our new coordinate system. We can now transform our data into it.}
+\end{frame}
+
+\begin{frame}[fragile]{DI and SVM Dendrite Rank Order Correlation}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{rank_DI_SVM.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{data_p_tot.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Presence}
+Performance on global presence detection: \newline
+Mean: 0.68 \newline
+Standard deviation: 0.08
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Presence Detection}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{combined_presence_alt.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{data_hm_tot.png}
+	\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Global Behavior}
+Performance on global presence detection: \newline
+Mean: 0.71 \newline
+Standard deviation: 0.1
+\end{frame}
+
+\begin{frame}[fragile]{SVM Performance on Combined Dendrites - Behavioral}
+\begin{center}
+	\begin{figure}
+	%\caption*{todo: tens, improve weights}
+      \includegraphics[width=1.0\textwidth]{combined_hitmiss_alt.png}
+	\end{figure}
+	\end{center}
 \end{frame}
 
 \end{document}

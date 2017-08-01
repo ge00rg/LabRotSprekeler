@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Goal}{10}{0}{2}
-\beamer@sectionintoc {3}{Univariate Analysis}{14}{0}{3}
-\beamer@sectionintoc {4}{Multivariate SMV Analysis}{41}{0}{4}
-\beamer@sectionintoc {5}{Population Coding}{54}{0}{5}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Goal}{9}{0}{2}
+\beamer@sectionintoc {3}{Univariate Analysis}{13}{0}{3}
+\beamer@sectionintoc {4}{Multivariate SMV Analysis}{42}{0}{4}
+\beamer@sectionintoc {5}{Population Coding}{48}{0}{5}
