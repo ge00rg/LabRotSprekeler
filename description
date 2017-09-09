@@ -1,0 +1,5 @@
+Dendritic Ca2+ as a Predictor of Stimulus
+Perception and Behavior
+
+Dendritic calcium in L5 pyramidal neurons has been hypothesized to play a role in consious perception by way of the BAC firing mechanism. In an experiment conducted by Takahashi et al., the calcium levels of many dendrites have been measured simultaneously in mice, while they perform a simple perception task.
+In this presentation, we explore the possibilities of applying multivariate machine learning techniques to such data and compare the results to the ones achieved by univariate techniques.
