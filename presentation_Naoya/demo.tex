@@ -94,7 +94,7 @@ Takahashi et al. 2016
 The goal of this project is to investigate the following:
 \begin{itemize}
 \only<+->{
-\item What is the relationship between Ca2+ activity and stimulus intensity/behavior}
+\item What is the relationship between Ca2+ activity and stimulus intensity/behavior?}
 \only<+->{
 \item Can we build predictive classifiers for this data?}
 \only<+->{
@@ -190,7 +190,7 @@ There are many separating hyperplanes, but which one is best?
 \bigskip
 \bigskip
 \bigskip
-The one that maximizes the hyperplanes' distance from the nearest datapoints of either class while classifying all data correctly - \textbf{the margin}
+The one that maximizes the hyperplane's distance from the nearest datapoints of either class while classifying all data correctly - \textbf{the margin}
 \end{center}}
 \column{0.55\textwidth}
 \begin{center}
@@ -211,17 +211,23 @@ The one that maximizes the hyperplanes' distance from the nearest datapoints of 
 \column{0.4\textwidth}
 \begin{center}
 \only<+->{
-The hyperplane is given by
-\begin{align*}
-g(\mathbf{x}) = \mathbf{w^Tx + b}
-\end{align*}}
-\only<+->{
-It turns out that the margin is given by $\frac{2}{||w||}$ and we maximize it by minimizing
-\begin{align*}
-\frac{1}{2}||\mathbf{w}||_2^2
-\end{align*}}
-\only<+->{
-under the constraint that \textbf{all data are classified correctly}.}
+Maximization of the margin can be formulated as a \textbf{constrained minimization problem}!
+
+}
+%\only<+->{
+%The hyperplane is given by
+%\begin{align*}
+%g(\mathbf{x}) = \mathbf{w^Tx + b}
+%\end{align*}}
+%\only<+->{
+%It turns out that the margin is given by $\frac{2}{||w||}$ and we maximize it by minimizing
+%\begin{align*}
+%\frac{1}{2}||\mathbf{w}||_2^2
+%\end{align*}}
+%\only<+->{
+%\bigskip
+%\bigskip
+%With the constraint that \textbf{all data are classified correctly}.}
 \end{center}
 \column{0.55\textwidth}
 \begin{center}
@@ -292,19 +298,41 @@ We permit errors, but still penalize them!}
 \end{columns}
 \end{frame}
 
+%\begin{frame}[fragile]{SVM - What is an SVM? Linearily Nonseparable/Noisy Data}
+%\begin{columns}[T,onlytextwidth]
+%\column{0.5\textwidth}
+%\only<+->{
+%Instead of $\frac{1}{2}||\mathbf{w}||_2^2$ we now minimize
+%\begin{align*}
+%\frac{1}{2}||\mathbf{w}||_2^2 + C\sum_{i=1}^n \xi_i}
+%\end{align*}
+%\only<+->{
+%where $\xi_i$ is the distance of a data point from their correct decision region.}
+%
+%\only<+->{
+%\textbf{The parameter C lets us now control the tradeoff between the generalization and training error (overfitting).}}
+%\column{0.5\textwidth}
+%\begin{center}
+%\begin{figure}
+%      \includegraphics[height=0.8\textwidth]{svm_nonsep_err.png}
+%	\end{figure}
+%	%\only<+->{
+%	%\begin{figure}
+%    %  \includegraphics[height=0.3\textwidth]{svm_exp.png}
+%	%\end{figure}}
+%	\end{center}
+%\end{columns}
+%\end{frame}
+
 \begin{frame}[fragile]{SVM - What is an SVM? Linearily Nonseparable/Noisy Data}
 \begin{columns}[T,onlytextwidth]
 \column{0.5\textwidth}
 \only<+->{
-Instead of $\frac{1}{2}||\mathbf{w}||_2^2$ we now minimize
-\begin{align*}
-\frac{1}{2}||\mathbf{w}||_2^2 + C\sum_{i=1}^n \xi_i}
-\end{align*}
+We can still formulate this as a constrained minimization problem, but now we \textbf{minimize the sum of errors while maximizing the margin}.}
 \only<+->{
-where $\xi_i$ is the distance of a data point from their correct decision region.}
 
-\only<+->{
-\textbf{The parameter C lets us now control the tradeoff between the generalization and training error (overfitting).}}
+\bigskip
+The coefficient $C$ controls the width of the margin at the expense of worse separation during training.}
 \column{0.5\textwidth}
 \begin{center}
 \begin{figure}
@@ -323,7 +351,7 @@ where $\xi_i$ is the distance of a data point from their correct decision region
 \only<+->{
 \item All data are normalized to zero mean and unit variance}
 \only<+->{
-\item Crossvalidation is performed to conrol for overfitting}
+\item Crossvalidation is performed to control for overfitting}
 \end{itemize}
 
 \end{frame}
@@ -615,9 +643,9 @@ We can use the previously best discriminating dendrites.}
 
 \begin{frame}
 \begin{thebibliography}{9}
-\bibitem {taka} Takahashi, N., Oertner, G. T., Hegemann, P. \& Larkum, E. M. Active cortical dendrites modulate perception. Science 335, 1587-1590 (2016)
-\bibitem {mante} Mante V., Sussillo D., Shenoy KV., Newsome WT. Context-dependent computation by recurrent dynamics in prefrontal cortex. Nature 503, 78-84 (2013)
-\bibitem {pinto} Pinto da Costa, J. New Results in Weighted Correlation and Weighted Principal Component Analysis with Applications, Chapter 2 (2015)
+\bibitem {taka} Takahashi, N., Oertner, G. T., Hegemann, P. \& Larkum, E. M. Active cortical dendrites modulate perception. Science 335, 1587-1590 (2016).
+\bibitem {mante} Mante V., Sussillo D., Shenoy, K. V., Newsome, W. T. Context-dependent computation by recurrent dynamics in prefrontal cortex. Nature 503, 78-84 (2013).
+\bibitem {pinto} Pinto da Costa, J. New Results in Weighted Correlation and Weighted Principal Component Analysis with Applications, Chapter 2 (2015).
 \end{thebibliography}
 \end{frame}
 
