@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Goal}{9}{0}{2}
+\beamer@sectionintoc {3}{Univariate Analysis}{13}{0}{3}
+\beamer@sectionintoc {4}{Multivariate SVM Analysis}{54}{0}{4}
+\beamer@sectionintoc {6}{Population Coding}{96}{0}{5}

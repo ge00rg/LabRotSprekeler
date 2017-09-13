@@ -1,0 +1,7 @@
+\frametitle{Population Response in Task Variable Space}
+\begin{center}
+	\begin{figure}
+	\caption*{Solve Problem with combined SVM first}
+      \includegraphics[width=1.0\textwidth]{reg_sum.png}
+	\end{figure}
+	\end{center}
